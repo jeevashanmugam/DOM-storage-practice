@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage </title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        padding-bottom: 30px;
+    }
+
+    .container {
+        width: max-content;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 6px;
+        background-color: #e9e9ed;
+        box-shadow: 0px 0px 5px #00000078;
+    }
+
+    form {
+        font-size: 24px;
+    }
+
+    input {
+        margin-bottom: 26px;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 2px solid gray;
+    }
+
+    button {
+
+        padding: 8px 20px;
+        font-size: 16px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h1>Saved in localStorage</h1>
+        <form action="" id="form">
+
+            <label for="userName">User Name : </label>
+            <input type="text" id="userName" value="" placeholder="Enter your user name"> <br>
+
+            <label for="psw"> Password : </label>
+            <input type="password" name="" id="psw" value="" placeholder="Enter your password"><br>
+            <button type="submit" id="btn">Submit</button>
+
+        </form>
+    </div>
+    <script>
+
+        let form = document.getElementById("form");
+        let userName = document.getElementById("userName");
+        let psw = document.getElementById("psw");
+
+        // console.log(psw.in,userName);
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            //console.log("btn wrk");
+
+            localStorage.setItem("User Name", userName.value)
+            localStorage.setItem("Password", psw.value)
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
